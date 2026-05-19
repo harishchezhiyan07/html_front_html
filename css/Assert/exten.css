@@ -1,0 +1,26 @@
+ body {
+            background-color: purple;
+        }
+
+        h1 {
+            color: pink;
+        }
+
+        p {
+            color: rgb(9, 9, 253);
+        }
+
+        h2 {
+            color: palevioletred;
+        }
+
+        div {
+            color: rgb(255, 196, 211);
+        }
+        h3 {
+            color: rgb(250, 3, 126);
+        }
+
+        footer {
+            color: rgb(248, 192, 239);
+        }
