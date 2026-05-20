@@ -23,4 +23,20 @@
 
         footer {
             color: rgb(248, 192, 239);
+
         }
+        div,h1,p{
+            background-color:olive;
+            color: silver;
+        }
+        .team{
+            color: rgb(255, 0, 0);
+            background-color: black;
+        }
+         #harish{
+            color: rgb(0, 255, 0);
+            background-color: black;
+        }
+        
+       
+        
