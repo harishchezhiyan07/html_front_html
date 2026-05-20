@@ -1,0 +1,31 @@
+
+
+#section{
+    background-color: lightsalmon;
+}
+.head{
+    color:navy;
+}
+#foot{
+    color: rgb(50, 4, 253);
+}
+section{
+    color: rgb(7, 7, 7);
+}
+#history{
+    color: rgb(250, 6, 6);
+}
+.li{
+    color: rgb(255, 230, 0);
+}
+div{
+    color: red;
+}
+.more{
+    color:red;
+
+}
+#footer{
+    color:green;
+}
+
