@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+.pro {
+    background-color: rgb(189, 61, 243);
+   
+    padding: 20px;
+    margin: auto;
+    border: solid 30px;
+}
+.kbd{
+    background-color: rgb(66, 5, 235);
+    padding: 60px;
+    margin-top:10px ;
+    color:white;
+
+}
