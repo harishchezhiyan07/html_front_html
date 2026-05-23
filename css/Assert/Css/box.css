@@ -17,3 +17,16 @@
     color:white;
 
 }
+.head{
+    padding: 30px;
+    margin-bottom: 10px;
+    background-color: rgb(252, 6, 6);
+    border: solid 10px;
+}
+.pa{
+    padding: 30px;
+    background-color:black;
+    color: azure;
+    margin-top: 10px;
+
+}

@@ -1,0 +1,26 @@
+*{
+      margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+.this{
+    background-color: darkslateblue;
+    width: 360px;
+    height: 360px;
+    margin: auto;
+
+}
+.end{
+    width: 180px;
+    height: 180px;
+    margin: auto;
+    background-color: white;
+
+}
+h3{
+    padding: 50px;
+    color: rgb(255, 30, 0);
+    text-align: center;
+    font: 100;
+    font-family:;
+}
