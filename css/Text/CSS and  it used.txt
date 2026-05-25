@@ -1,0 +1,83 @@
+1. What is CSS and why is it used?
+CSS (Cascading Style Sheets) is used to style and design web pages.
+It controls colors, layout, fonts, and overall appearance.
+
+
+2. What are the three types of CSS?
+Inline CSS, Internal CSS, and External CSS.
+They differ based on where the styles are written.
+
+
+
+3. Difference between Inline, Internal, External CSS?
+Inline is inside HTML tags, Internal is in <style> tag, External is in separate .css file.
+External CSS is reusable, while Inline is used for single elements.
+
+4. Which CSS type has highest priority?
+Inline CSS has the highest priority.
+Then Internal and External CSS follow.
+
+
+
+5. Which CSS method is mostly used in real-time projects?
+External CSS is mostly used.
+It helps maintain clean and reusable code.
+
+
+
+6. What are CSS selectors?
+Selectors are used to target HTML elements.
+They apply styles to specific elements.
+
+
+
+7. Difference between class and ID selector?
+Class can be used for multiple elements (.), ID is unique (#).
+ID has higher priority than class.
+
+
+8. Purpose of universal selector?
+Universal selector (*) selects all elements.
+It is used for global styling.
+
+
+
+9. What is cascading in CSS?
+Cascading means applying styles based on priority.
+The last or most specific rule is applied.
+
+
+
+10. What is specificity in CSS?
+Specificity decides which style is applied.
+Higher specificity rules override lower ones.
+
+
+
+11. Difference between block and inline elements?
+Block elements take full width and start on a new line.
+Inline elements take only needed width and stay in same line.
+
+
+
+12. What is Flexbox and why is it used?
+Flexbox is a layout system for arranging elements.
+It helps align items easily in rows or columns.
+
+
+
+13. Difference between justify-content and align-items?
+justify-content aligns items horizontally.
+align-items aligns items vertically.
+
+
+
+14. Difference between px, em, rem, %?
+px is fixed, em is relative to parent, rem to root, % to parent size.
+Relative units help in responsive design.
+
+
+
+15. Difference between RGB, RGBA, HEX?
+RGB defines colors using red, green, blue values; RGBA adds transparency.
+HEX is a hexadecimal color code
