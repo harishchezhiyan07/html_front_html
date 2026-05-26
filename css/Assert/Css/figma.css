@@ -1,0 +1,120 @@
+*{
+    padding: 0%;
+    margin: 0px;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    overflow-x: hidden;
+    font-family: 'Times New Roman', Times, serif;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.logo{
+    display: flex;
+   
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  
+}
+.text{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+
+}
+.text input{
+    padding: 10px;
+    border-radius: 15px;
+    border: none;
+    background-color: rgba(169, 169, 169, 0.466);
+    width: 250px;
+}
+.login{
+     padding: 10px;
+    background-color: white;
+    border: none;
+    gap: 20px;
+}
+.signup{
+    padding: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+    background-color: white;
+    border-radius: 10px
+    
+
+}
+.dash{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-left: 50PX;
+    margin-right: 50px;
+}
+.open{
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 255, 0.842);
+    color: white;
+    border: none;
+}
+.hhh{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.simmmple{
+    margin-left: 200px;
+    padding: 40px;
+    align-items: center;
+}
+.an{
+    
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 255, 0.842);
+    color: white;
+    border: none;
+}
+.src{
+    margin-right: 50px;
+    padding: 40px;
+    align-items: center;
+}
+.foot{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px;
+}
+.wwe{
+    padding: 80px;
+    padding-top: 0%;
+    padding-bottom: 20px;
+}
+footer{
+    background-color:rgba(245, 245, 245, 0.932);
+    margin-left: 30px;
+    margin-right: 30px;
+
+
+}
