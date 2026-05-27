@@ -121,13 +121,14 @@ footer{
 
 }
 .about{
-    padding: 40px;
-    margin-left: 30px;
+    padding: 10px;
+    margin-left: 80px;
     gap: 29px;
     display: flex;
     
 }
 .sec{
     display: flex;
+    box-shadow:  4px 4px 4px rgba(250, 223, 189, 0.897);
     
 }
