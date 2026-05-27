@@ -9,35 +9,33 @@ html{
 body{
     overflow-x: hidden;
     font-family: 'Times New Roman', Times, serif;
-}
-.sec{
-   
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    padding: 60px;
-    background-color:rgba(128, 128, 128, 0.932);
-    gap: 5px;
-}
-.para{
-  display: grid;
-   margin-top: 60px;
-   margin-left: 10px;
-
-}
-.colo{
- 
-}
-#bu{
-    background-color: rgba(255, 68, 0, 0.932);
-    border: none;
-   
-    width: 100px;
-    height: 30px;
     
 }
-.add{
-    margin-left: 10px;
+.head{
+    
+    display: flex;
+    color: white    ;
+    justify-content: space-between;
+    padding: 40px;
+
+}   
+.url{
+    margin-right: 900px;
+    background-color:rgb(0, 0, 56) ;
+    color: white;
+    width: 100px;
+    border-color: white;
+    
 }
-.gk{
-    background-color: white;
+.pd select{
+     background-color:rgb(0, 0, 56) ;
+    color: white;
+    width: 100px;
+    border-color: white;
+}
+.body{
+    background-color:rgb(0, 0, 56) ;
+}
+.add{
+    color: aqua;
 }
