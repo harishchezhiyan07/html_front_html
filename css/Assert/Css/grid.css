@@ -1,0 +1,53 @@
+*{
+    padding: 0%;
+    margin: 0px;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    overflow-x: hidden;
+    font-family: 'Times New Roman', Times, serif;
+}
+.add{
+    background-color: rgb(253, 253, 253);
+    padding: 60px;
+    color: wheat;
+}
+.ddd{
+    background-color: white;
+    padding: 40px;
+}
+button{
+    background-color: aqua;
+    width: 200px;
+    height: 50px;
+    border-radius: 8px;
+
+}
+.ss:hover{
+    background-color: rgb(255, 154, 3);
+    color: rgba(0, 0, 0, 0.5);
+}
+.id{
+    color: black;
+  
+    width: 500px;
+    height: 50px;
+    border-radius: 8px;
+}
+.hari{
+    padding: 20px;
+    color: beige;
+}
+.sec{
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: black;
+}
+.sec:active{
+    background-color: blue;
+    color: bisque;
+}
