@@ -1,0 +1,159 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    overflow-x: hidden;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.head{
+    background-color:black;
+    color: white;
+    display: flex;
+    height: 70px;
+    justify-content:space-between;
+    align-items: center;
+    font-size:x-small;
+    margin:10px;
+    margin-bottom: 0%;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    padding-left: 600px;
+}
+.nav a{
+   padding: 15px;
+   margin-right: 10px;
+
+}
+.nav input{
+    padding: 10px;
+    border-radius: 15px;
+    border: white;
+    background-color: black;
+    width: 150px;
+    color: white;
+    text-align: center;
+    font-size: small;
+}
+.section{
+    background-color:black;
+    color: white;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.at{
+    background-color: black;
+    color: white;
+    padding: 3px;
+    border-radius: 15px;
+    border: none;
+    font-size:x-small;
+}
+
+.banner{
+   display: flex;
+   justify-content: center;
+    margin-top: 0px;
+}
+    .parent{
+
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+   align-items: center;
+    gap: 20px;
+}
+.card{
+    background-color: white;
+    color: rgb(66, 66, 66);
+    padding: 20px;
+    width: 250px;
+    margin: 10px;gap: 10px;
+    transition: 0.1s ease;
+
+}
+.card:hover{
+    background-color: rgb(147, 147, 248);
+}
+.new{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-size:50px;
+}
+.explore{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+.btn{
+ 
+    padding: 15px;
+    border-radius: 25px;
+    border: 3px solid black;
+    color: black;
+    background-color: white;
+    margin: 20px;
+}
+.btn:hover{
+    background-color: black;
+    color: white;
+}
+.the{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.car{
+    background-color: white;
+    color: rgb(66, 66, 66);
+    margin: 10px;gap: 10px;
+    transition: 0.1s ease;
+}
+.car button{
+      padding: 15px;
+    border-radius: 25px;
+    border: 3px solid black;
+    color: black;
+    background-color: white;
+    margin: 20px;
+    margin-left: 90px;
+}
+.as:hover{
+    
+      background-color: black;
+    color: white;
+}
+.foot{
+    background-color: rgb(47, 47, 189);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 60PX;
+margin-left: 30PX;
+margin-right: 30PX;
+font-family:'Times New Roman', Times, serif
+}
+
+   
+   
