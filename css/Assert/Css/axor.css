@@ -25,6 +25,8 @@ a{
     font-size:x-small;
     margin:10px;
     margin-bottom: 0%;
+    position: sticky;
+    top: 0;
 }
 .logo{
     display: flex;
@@ -79,6 +81,8 @@ a{
     justify-content: space-between;
    align-items: center;
     gap: 20px;
+    transition: 0.1s ease;
+
 }
 .card{
     background-color: white;
@@ -86,11 +90,12 @@ a{
     padding: 20px;
     width: 250px;
     margin: 10px;gap: 10px;
-    transition: 0.1s ease;
+   
 
 }
 .card:hover{
-    background-color: rgb(147, 147, 248);
+    
+    transform: scale(1.1);
 }
 .new{
     display: flex;
@@ -123,6 +128,8 @@ a{
     justify-content: center;
     align-items: center;
     padding: 20px;
+    margin-left:40px;
+
 }
 .car{
     background-color: white;
@@ -145,14 +152,18 @@ a{
     color: white;
 }
 .foot{
-    background-color: rgb(47, 47, 189);
+    background-color: rgba(0, 0, 0, 0.849);
     color: white;
     display: flex;
     justify-content: space-between;
     padding: 60PX;
-margin-left: 30PX;
-margin-right: 30PX;
+margin-left: 20PX;
+margin-right: 20PX;
 font-family:'Times New Roman', Times, serif
+}
+.card p:hover{
+    color: rgba(252, 0, 0, 0.897);
+
 }
 
    
