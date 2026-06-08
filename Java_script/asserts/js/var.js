@@ -59,3 +59,7 @@ console.log(petName);
 
 var gameScore;
 console.log(gameScore);
+let userAge =13
+console.log(typeof userAge,"userAge" , userAge,);
+userAge =14
+console.log(typeof userAge,"userAge" , userAge,);
