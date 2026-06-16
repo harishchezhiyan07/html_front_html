@@ -1,0 +1,84 @@
+<script>
+    //task 1
+
+    const array=["HTML","CSS","JavaScript"]
+    const showData=array.push("React","Node.js")
+    console.log("showData",showData);
+    console.log("array",array );
+    // task 2
+
+    const arr=["HTML","CSS","JavaScript","React"]
+    const remove=arr.pop(3)
+    console.log(remove);
+    console.log(arr);
+    // task 3
+    
+    const fruit=["Apple","Mango","Orange","Banana"]
+    const re=fruit.shift(0)
+    console.log(re);
+    console.log(fruit);
+
+    // task4
+
+  const hero=["Ajith","Suriya","SK"]
+    const heros= hero.unshift("Vijay","Dhanush")
+    console.log(hero);
+
+    // task 5
+    const orginalAdd=["HTML","CSS","Bootstrap","React"]
+    const copy = orginalAdd.splice(2,1,"Java script")
+    console.log( orginalAdd);
+    //task 6
+    const cource=["HTML","CSS","JavaScript","React","Node"]
+    const sum=cource.slice(2,4)
+    console.log(sum);
+    // Task6
+  let student = {
+   name: "Sudhan",
+   course: "MERN",
+   city: "Chennai",
+   age: 25
+};
+
+for (let key in student) {
+    console.log(key + " : " + student[key]);
+}
+//task8
+let actors = [
+   {
+      name: "Vijay",
+      movie: "GOAT"
+   },
+   {
+      name: "Ajith",
+      movie: "Vidaamuyarchi"
+   },
+   {
+      name: "Suriya",
+      movie: "Kanguva"
+   }
+];
+
+for (let i = 0; i < actors.length; i++) {
+    console.log(actors[i].name + " - " + actors[i].movie);
+}
+
+let he=["Vijay","Ajith","Suriya","SK"]
+let at=he.join("|")
+console.log(at);
+//task10
+let method=["HTML","CSS","JavaScript","React"]
+if(method.includes("React")){
+    console.log("cource found");
+    
+}else{
+    console.log("not found"); 
+}
+
+
+
+    
+    
+    
+    
+</script>
