@@ -1,0 +1,16 @@
+<script>
+    const parent =()=>{
+        let name = "lokesh"
+        let amount =10000
+        const child =()=>{
+            amount += 5000
+            console.log(name);
+            
+            console.log(amount);
+            
+        }
+       return child()
+    }
+    const closure=parent()
+    closure()
+</script>
