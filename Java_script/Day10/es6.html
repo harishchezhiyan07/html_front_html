@@ -1,0 +1,108 @@
+<script>
+    
+    
+
+
+
+
+let name = "Harish";
+console.log(name);
+
+name = "Sudhan";
+console.log(name);
+
+course = "JavaScript";
+
+const greet = () => {
+    console.log("Welcome To JavaScript");
+};
+
+greet();
+
+const showHero = (heroName) => {
+    console.log(`Hero Name : ${heroName}`);
+};
+
+showHero("Vijay");
+
+const add = (a, b) => {
+    console.log(a + b);
+};
+
+add(10, 20);
+
+let hero = "Vijay";
+
+console.log(`My Favourite Hero is ${hero}`);
+
+let nameOne = "Harish";
+let courseOne = "MERN";
+let city = "Chennai";
+
+console.log(`My name is ${nameOne}, I am studying ${courseOne} and I live in ${city}.`);
+
+let heroes = ["Vijay", "Ajith", "Suriya"];
+
+let [hero1, hero2] = heroes;
+
+console.log(hero1);
+console.log(hero2);
+
+let student = {
+    name: "Sudhan",
+    course: "MERN",
+    city: "Chennai"
+};
+
+let { names, coursee } = student;
+
+console.log(names);
+console.log(coursee);
+
+let courses = ["HTML", "CSS", "JavaScript"];
+
+let newCourses = [...courses, "React"];
+
+console.log(newCourses);
+
+let heroes1 = ["Vijay", "Ajith"];
+let heroes2 = ["Suriya", "SK"];
+
+let allHeroes = [...heroes1, ...heroes2];
+
+console.log(allHeroes);
+ 
+let students = {
+    name: "Sudhan",
+    city: "Chennai"
+};
+
+let updatedStudent = {
+    ...student,
+    course: "MERN"
+};
+
+console.log(updatedStudent);
+
+const total = (...numbers) => {
+    console.log(numbers);
+};
+
+total(10, 20, 30, 40);
+
+
+const sum = (...numbers) => {
+    let total = 0;
+
+    for (let num of numbers) {
+        total += num;
+    }
+
+    console.log(total);
+};
+
+sum(10, 20, 30, 40, 50);
+
+
+
+</script>
