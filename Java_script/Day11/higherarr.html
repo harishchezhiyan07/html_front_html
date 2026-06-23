@@ -1,0 +1,200 @@
+<script>
+     const heroes = [
+
+    "Vijay",
+
+    "Ajith",
+
+    "Suriya"
+];
+const data= heroes.map( hero => hero.toUpperCase());
+console.log(data);
+
+const collections = [
+
+   100,
+
+   200,
+
+   300,
+
+   400
+];
+const sum =collections.map ( collections => collections*10)
+console.log(sum);
+
+const movies = [
+
+   "GOAT",
+
+   "Leo",
+
+   "Master"
+];
+const film= movies.map(movies=> "movies : "+movies
+)
+console.log(film);
+
+const collection = [
+
+   100,
+
+   500,
+
+   800,
+
+   200,
+
+   900
+];
+const filter = collection.filter((ele, i) => {
+   return ele > 500;
+});
+console.log(filter);
+
+const marks = [
+
+   35,
+
+   80,
+
+   20,
+
+   90,
+
+   45
+];
+const mark=marks.filter((e,i)=>{
+    return e >= 35
+})
+console.log(mark);
+
+const actor = [
+
+   "Vijay",
+
+   "Ajith",
+
+   "SK",
+
+   "Suriya"
+];
+const he =actor.filter(actor => actor.length > 4)
+console.log(he);
+
+const collect = [
+
+   100,
+
+   500,
+
+   800,
+
+   200
+];
+const array=collect.find ( collect => collect > 400)
+console.log(array);
+
+const heros = [
+
+   "Vijay",
+
+   "Ajith",
+
+   "Suriya"
+];
+
+
+const result = heros.indexOf("Suriya");
+
+console.log(result);
+
+const movie = [
+
+   "GOAT",
+
+   "Leo",
+
+   "Master"
+];
+const move=movie.indexOf("Leo")
+console.log(move);
+
+const mars = [
+
+   35,
+
+   80,
+
+   20,
+
+   90
+];
+const take = mars.some((e)=>e<35)
+console.log(take);
+
+const ections = [
+
+   100,
+
+   200,
+
+   900
+];
+const ection= ections.some((e)=>e>800)
+console.log(ection);
+
+const maks = [
+
+   50,
+
+   70,
+
+   90,
+
+   40
+];
+const ks=maks.every((e)=>e>35)
+console.log(ks);
+
+const ages = [
+
+   20,
+
+   25,
+
+   30,
+
+   35
+];
+const age =ages.every((e)=>e>18)
+console.log(age);
+
+const ect = [
+
+   100,
+
+   200,
+
+   300,
+
+   400
+];
+const tion = ect.reduce((acc,cu)=>{
+    return acc+cu
+})
+console.log(tion);
+
+
+
+
+
+
+
+
+
+
+    
+        
+
+</script>
