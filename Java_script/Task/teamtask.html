@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome Message</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex justify-center items-center h-screen">
+
+  <div class="bg-white p-8 rounded-lg shadow-lg w-96 text-center">
+    <h1 class="text-2xl font-bold mb-6">Welcome App</h1>
+
+    <input
+      type="text"
+      id="username"
+      placeholder="Enter your name"
+      class="w-full border border-gray-300 rounded-md p-2 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
+    >
+
+    <button
+      onclick="showWelcome()"
+      class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition"
+    >
+      Show Welcome
+    </button>
+
+    <h2 id="message" class="text-xl font-semibold text-green-600 mt-6"></h2>
+  </div>
+
+   <div class="bg-white p-8 rounded-lg shadow-lg w-80">
+        <h2 class="text-2xl font-bold text-center mb-6">Login</h2>
+
+        <!-- Username -->
+        <input
+            type="text"
+            id="username"
+            placeholder="Enter Username"
+            class="w-full border p-2 rounded mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+
+        <!-- Password -->
+        <input
+            type="password"
+            id="password"
+            placeholder="Enter Password"
+            class="w-full border p-2 rounded mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+
+        <!-- Login Button -->
+        <button
+            onclick="login()"
+            class="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600"
+        >
+            Login
+        </button>
+
+        <!-- Result -->
+        <h2 id="result" class="text-center mt-4 font-semibold"></h2>
+    </div>
+  </div>
+
+
+    <h2>Highest collection </h2>
+    <p id="result"></p>
+
+
+  <script>
+    function showWelcome() {
+      const userName = document.querySelector("#username").value;
+      document.querySelector("#message").textContent = `Welcome ${userName}`;
+    }
+    const checkPassword=()=> {
+    let password = document.getElementById("password").value;
+
+    if (password.length >= 8) {
+        document.getElementById("result").innerText = "Strong Password";
+    } else {
+        document.getElementById("result").innerText = "Weak Password";
+    }
+}
+
+   function login() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            const result = document.getElementById("result");
+
+            if (username === "" || password === "") {
+                result.innerText = "Login Success";
+                result.className = "text-green-600 text-center mt-4 font-semibold";
+            } else {
+                result.innerText = "Invalid Login";
+                result.className = "text-red-600 text-center mt-4 font-semibold";
+            }
+        }
+
+        const highNum=[100,500,800,200]
+   const t=highNum.reduce((acc,cur)=>{
+    if(cur>acc){
+     acc=cur
+    }
+    return acc
+   })
+   document.getElementById("result").innerText=t
+  </script>
+
+</body>
+</html>
+
+
+    
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Tasks</title>
+</head>
+
+<body>
+
+  <!-- Welcome App -->
+  <div>
+    <h1>Welcome App</h1>
+
+    <input
+      type="text"
+      id="welcomeName"
+      placeholder="Enter your name"
+    >
+
+    <button onclick="showWelcome()">
+      Show Welcome
+    </button>
+
+    <h2 id="welcomeMessage"></h2>
+  </div>
+
+  <hr>
+
+  <!-- Login App -->
+  <div>
+    <h2>Login</h2>
+
+    <input
+      type="text"
+      id="loginUsername"
+      placeholder="Enter Username"
+    >
+
+    <br><br>
+
+    <input
+      type="password"
+      id="password"
+      placeholder="Enter Password"
+      onkeyup="checkPassword()"
+    >
+
+    <p id="passwordResult"></p>
+
+    <button onclick="login()">
+      Login
+    </button>
+
+    <h2 id="loginResult"></h2>
+  </div>
+
+  <hr>
+
+  <!-- Highest Collection -->
+  <div>
+    <h2>Highest Collection</h2>
+
+    <p id="highestResult"></p>
+  </div>
+
+  <script>
+    // Welcome Message
+    function showWelcome() {
+      const userName = document.getElementById("welcomeName").value;
+      document.getElementById("welcomeMessage").innerText =
+        `Welcome ${userName}`;
+    }
+
+    // Password Strength
+    function checkPassword() {
+      const password = document.getElementById("password").value;
+
+      if (password.length >= 8) {
+        document.getElementById("passwordResult").innerText = "Strong Password";
+      } else {
+        document.getElementById("passwordResult").innerText = "Weak Password";
+      }
+    }
+
+    // Login Validation
+    function login() {
+      const username = document.getElementById("loginUsername").value;
+      const password = document.getElementById("password").value;
+
+      const result = document.getElementById("loginResult");
+
+      if (username === "admin" && password === "12345") {
+        result.innerText = "Login Success";
+      } else {
+        result.innerText = "Invalid Login";
+      }
+    }
+
+    // Highest Collection
+    const highNum = [100, 500, 800, 200];
+
+    const highest = highNum.reduce((acc, cur) => {
+      return cur > acc ? cur : acc;
+    });
+
+    document.getElementById("highestResult").innerText = highest;
+  </script>
+    
+</body>
+</html>
