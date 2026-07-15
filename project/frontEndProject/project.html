@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Laundry Booking App</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+  <!-- Navbar -->
+<nav class="bg-blue-700 text-white shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="flex justify-between items-center h-16">
+
+            <div class="text-2xl font-bold">
+                🧺 LaundryPro
+            </div>
+
+            <ul class="hidden md:flex space-x-8 font-medium">
+                <li><a href="#" class="hover:text-yellow-300">Home</a></li>
+                <li><a href="#services" class="hover:text-yellow-300">Services</a></li>
+                <li><a href="#shops" class="hover:text-yellow-300">Nearby Shops</a></li>
+                <li><a href="#booking" class="hover:text-yellow-300">Book Now</a></li>
+                <li><a href="#contact" class="hover:text-yellow-300">Contact</a></li>
+            </ul>
+
+            <button class="bg-yellow-400 text-black px-4 py-2 rounded hover:bg-yellow-300">
+                Login
+            </button>
+
+        </div>
+    </div>
+</nav>
+<section class="bg-gradient-to-r from-blue-700 to-cyan-500 text-white py-20">
+
+<div class="text-center">
+
+<h1 class="text-5xl font-bold mb-5">
+Doorstep Laundry Service
+</h1>
+
+<p class="text-xl">
+Book Washing, Ironing & Dry Cleaning in Minutes
+</p>
+
+<button class="bg-yellow-400 text-black px-8 py-3 mt-8 rounded-lg">
+Book Now
+</button>
+
+</div>
+
+</section>
+<section id="services" class="py-16 bg-white">
+
+<h2 class="text-4xl font-bold text-center mb-10">
+Our Services
+</h2>
+
+<div class="grid md:grid-cols-4 gap-6 px-10">
+
+<div class="bg-blue-100 p-6 rounded-xl text-center">
+🧺
+<h3 class="text-xl font-bold mt-3">Washing</h3>
+</div>
+
+<div class="bg-green-100 p-6 rounded-xl text-center">
+👔
+<h3 class="text-xl font-bold mt-3">Ironing</h3>
+</div>
+
+<div class="bg-yellow-100 p-6 rounded-xl text-center">
+✨
+<h3 class="text-xl font-bold mt-3">Dry Cleaning</h3>
+</div>
+
+<div class="bg-pink-100 p-6 rounded-xl text-center">
+🚚
+<h3 class="text-xl font-bold mt-3">Pickup & Delivery</h3>
+</div>
+
+</div>
+
+</section>
+<div class="my-8 px-10">
+
+<input
+type="text"
+placeholder="Search Laundry Shop..."
+class="w-full p-3 border rounded-lg shadow"
+/>
+
+<div class="bg-white p-5 rounded-xl shadow">
+
+<h2 class="text-2xl font-bold">
+Quick Wash
+</h2>
+
+<p>⭐ 4.8</p>
+
+<p>📍 1 km Away</p>
+
+<p>🕒 Open : 8AM - 9PM</p>
+
+<p class="text-green-600">
+Starting ₹99
+</p>
+
+<button class="bg-blue-600 text-white px-4 py-2 rounded mt-3">
+Select
+</button>
+
+</div>
+<input type="date">
+
+<input type="time">
+
+<input type="number" placeholder="Number of Clothes">
+
+<select>
+
+<option>Cash</option>
+
+<option>UPI</option>
+
+<option>Card</option>
+
+</select>
+<div class="bg-white p-6 rounded shadow mt-8">
+
+<h2 class="text-2xl font-bold">
+Track Order
+</h2>
+
+<input
+placeholder="Enter Order ID"
+class="border p-2 rounded w-full my-3">
+
+<button class="bg-green-600 text-white px-4 py-2 rounded">
+Track
+</button>
+
+</div>
+
+</div>
+
+</body>
+</html>
