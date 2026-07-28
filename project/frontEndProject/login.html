@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LOGIN</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --linen:#F6F3EC;
+    --indigo:#26344A;
+    --indigo-2:#324260;
+    --soap:#8FC3BF;
+    --citrus:#E7A94C;
+    --ink:#20241E;
+  }
+  body{ font-family:'Manrope', sans-serif; background:var(--linen); color:var(--ink); }
+  .font-display{ font-family:'Fraunces', serif; }
+
+  /* Fold-line signature: a soft crease pattern like pressed fabric */
+  .fold-panel{
+    background:
+      repeating-linear-gradient(
+        115deg,
+        rgba(255,255,255,0.035) 0px,
+        rgba(255,255,255,0.035) 1px,
+        transparent 1px,
+        transparent 64px
+      ),
+      linear-gradient(160deg, var(--indigo) 0%, var(--indigo-2) 60%, #1B2739 100%);
+  }
+
+  .crease{
+    position:absolute;
+    height:1px;
+    background:linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent);
+  }
+
+  @keyframes rise{
+    0%{ transform:translateY(8px); opacity:0; filter:blur(6px); }
+    100%{ transform:translateY(0); opacity:1; filter:blur(0); }
+  }
+  .rise{ animation:rise 0.7s cubic-bezier(.2,.7,.3,1) both; }
+
+  @keyframes bubbleFloat{
+    0%{ transform:translateY(0) scale(1); opacity:0.55; }
+    50%{ opacity:0.9; }
+    100%{ transform:translateY(-140px) scale(1.15); opacity:0; }
+  }
+  .bubble{
+    position:absolute;
+    border-radius:9999px;
+    background:radial-gradient(circle at 30% 30%, rgba(255,255,255,0.9), rgba(143,195,191,0.15));
+    animation:bubbleFloat linear infinite;
+  }
+
+  input:focus-visible, button:focus-visible, a:focus-visible{
+    outline:2px solid var(--soap);
+    outline-offset:2px;
+  }
+
+  .tab-active{
+    color:var(--ink);
+    border-bottom:2px solid var(--citrus);
+  }
+  .tab-inactive{
+    color:#8A8578;
+    border-bottom:2px solid transparent;
+  }
+
+  .field-wrap{
+    border-bottom:1.5px solid #D9D4C6;
+    transition:border-color .2s ease;
+  }
+  .field-wrap:focus-within{
+    border-color:var(--indigo);
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .rise, .bubble{ animation:none !important; }
+  }
+</style>
+</head>
+<body class="min-h-screen">
+
+<div class="min-h-screen flex flex-col lg:flex-row">
+
+  <!-- LEFT: Brand / signature panel -->
+  <div class="fold-panel relative overflow-hidden lg:w-1/2 min-h-[280px] lg:min-h-screen flex flex-col justify-between px-8 py-10 sm:px-14 sm:py-14 text-linen">
+
+    <!-- floating bubbles, soft & few -->
+    <div class="bubble" style="width:14px;height:14px;left:12%;bottom:-20px;animation-duration:9s;animation-delay:0s;"></div>
+    <div class="bubble" style="width:8px;height:8px;left:24%;bottom:-20px;animation-duration:7s;animation-delay:2s;"></div>
+    <div class="bubble" style="width:20px;height:20px;left:70%;bottom:-20px;animation-duration:11s;animation-delay:1s;"></div>
+    <div class="bubble" style="width:10px;height:10px;left:82%;bottom:-20px;animation-duration:8s;animation-delay:3.5s;"></div>
+    <div class="bubble" style="width:6px;height:6px;left:55%;bottom:-20px;animation-duration:6.5s;animation-delay:4.5s;"></div>
+
+    <!-- crease lines, like a folded shirt -->
+    <div class="crease" style="top:22%; left:5%; width:38%;"></div>
+    <div class="crease" style="top:58%; left:30%; width:55%;"></div>
+    <div class="crease" style="top:81%; left:10%; width:30%;"></div>
+
+    <div class="relative z-10 rise">
+      <div class="flex items-center gap-2.5">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 3H20C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3Z" stroke="#E7A94C" stroke-width="1.4"/>
+          <circle cx="12" cy="13.5" r="5.2" stroke="#8FC3BF" stroke-width="1.4"/>
+          <circle cx="12" cy="13.5" r="2.3" stroke="#F6F3EC" stroke-width="1.1"/>
+          <circle cx="6.4" cy="6.2" r="0.9" fill="#E7A94C"/>
+        </svg>
+        <span class="font-display text-xl tracking-tight">Pressed &amp; Pure</span>
+      </div>
+    </div>
+
+    <div class="relative z-10 max-w-md rise" style="animation-delay:.1s">
+      <p class="text-[13px] uppercase tracking-[0.18em] text-[#9FB3C8] mb-3">Dry wash, done right</p>
+      <h1 class="font-display text-3xl sm:text-4xl leading-[1.15] mb-4">
+        No water. No shrinking.<br class="hidden sm:block"> Just care, pressed in.
+      </h1>
+      <p class="text-[15px] leading-relaxed text-[#C7D0DC] max-w-sm">
+        Sign in to track pickups, schedule your next wash, and see your garments come home exactly as they left.
+      </p>
+    </div>
+
+    <div class="relative z-10 hidden sm:flex items-center gap-6 text-[13px] text-[#93A4B8] rise" style="animation-delay:.2s">
+      <span>24-hr turnaround</span>
+      <span class="w-1 h-1 rounded-full bg-[#93A4B8]"></span>
+      <span>Fabric-safe solvents</span>
+      <span class="w-1 h-1 rounded-full bg-[#93A4B8]"></span>
+      <span>Doorstep pickup</span>
+    </div>
+  </div>
+
+  <!-- RIGHT: Form panel -->
+  <div class="lg:w-1/2 flex items-center justify-center px-6 py-12 sm:px-10">
+    <div class="w-full max-w-sm rise" style="animation-delay:.15s">
+
+      <div class="mb-8">
+        <h2 class="font-display text-2xl text-[var(--ink)] mb-1">Welcome back</h2>
+        <p class="text-[14px] text-[#8A8578]">Sign in to your Pressed &amp; Pure account.</p>
+      </div>
+
+      <!-- Tabs -->
+      <div class="flex gap-6 mb-8 text-[14px] font-semibold">
+        <button id="tab-login" class="pb-2 tab-active transition-colors" onclick="switchTab('login')">Sign in</button>
+        <button id="tab-signup" class="pb-2 tab-inactive transition-colors" onclick="switchTab('signup')">Create account</button>
+      </div>
+
+      <!-- Message banner -->
+      <div id="banner" class="hidden mb-5 text-[13.5px] rounded-md px-3.5 py-2.5"></div>
+
+      <!-- LOGIN FORM -->
+      <form id="form-login" class="space-y-6" onsubmit="return handleLogin(event)">
+        <div class="field-wrap">
+          <label for="login-email" class="block text-[12px] uppercase tracking-wide text-[#8A8578] mb-1.5">Email</label>
+          <input id="login-email" type="email" required placeholder="you@example.com"
+            class="w-full bg-transparent pb-2 text-[15px] placeholder:text-[#BEBAAD] focus:outline-none">
+        </div>
+        <div class="field-wrap">
+          <div class="flex items-center justify-between mb-1.5">
+            <label for="login-password" class="block text-[12px] uppercase tracking-wide text-[#8A8578]">Password</label>
+            <button type="button" onclick="togglePw('login-password', this)" class="text-[12px] text-[#8A8578] hover:text-[var(--ink)]">Show</button>
+          </div>
+          <input id="login-password" type="password" required placeholder="••••••••"
+            class="w-full bg-transparent pb-2 text-[15px] placeholder:text-[#BEBAAD] focus:outline-none">
+        </div>
+
+        <button type="submit"
+          class="w-full py-3 rounded-md text-[14.5px] font-semibold text-[var(--linen)] bg-[var(--indigo)] hover:bg-[var(--indigo-2)] transition-colors">
+          Sign in
+        </button>
+      </form>
+
+      <!-- SIGNUP FORM -->
+      <form id="form-signup" class="space-y-6 hidden" onsubmit="return handleSignup(event)">
+        <div class="field-wrap">
+          <label for="signup-name" class="block text-[12px] uppercase tracking-wide text-[#8A8578] mb-1.5">Full name</label>
+          <input id="signup-name" type="text" required placeholder="Priya Raman"
+            class="w-full bg-transparent pb-2 text-[15px] placeholder:text-[#BEBAAD] focus:outline-none">
+        </div>
+        <div class="field-wrap">
+          <label for="signup-email" class="block text-[12px] uppercase tracking-wide text-[#8A8578] mb-1.5">Email</label>
+          <input id="signup-email" type="email" required placeholder="you@example.com"
+            class="w-full bg-transparent pb-2 text-[15px] placeholder:text-[#BEBAAD] focus:outline-none">
+        </div>
+        <div class="field-wrap">
+          <label for="signup-password" class="block text-[12px] uppercase tracking-wide text-[#8A8578] mb-1.5">Password</label>
+          <input id="signup-password" type="password" required minlength="6" placeholder="At least 6 characters"
+            class="w-full bg-transparent pb-2 text-[15px] placeholder:text-[#BEBAAD] focus:outline-none">
+        </div>
+
+        <button type="submit"
+          class="w-full py-3 rounded-md text-[14.5px] font-semibold text-[var(--linen)] bg-[var(--indigo)] hover:bg-[var(--indigo-2)] transition-colors">
+          Create account
+        </button>
+      </form>
+
+      <p class="mt-8 text-[12.5px] text-[#B0AB9C] leading-relaxed">
+        Demo account preloaded — email <span class="text-[#8A8578] font-medium">demo@pressedpure.com</span>,
+        password <span class="text-[#8A8578] font-medium">wash1234</span>.
+      </p>
+    </div>
+  </div>
+</div>
+
+<script>
+  // ---- In-memory data store (no localStorage/sessionStorage per environment rules) ----
+  const db = {
+    users: [
+      { name: "Demo Customer", email: "demo@pressedpure.com", password: "wash1234" }
+    ],
+    currentUser: null
+  };
+
+  function showBanner(message, kind){
+    const banner = document.getElementById('banner');
+    banner.textContent = message;
+    banner.classList.remove('hidden', 'bg-red-50', 'text-red-700', 'bg-emerald-50', 'text-emerald-700');
+    if(kind === 'error'){
+      banner.classList.add('bg-red-50', 'text-red-700');
+    } else {
+      banner.classList.add('bg-emerald-50', 'text-emerald-700');
+    }
+  }
+
+  function switchTab(which){
+    const loginTab = document.getElementById('tab-login');
+    const signupTab = document.getElementById('tab-signup');
+    const loginForm = document.getElementById('form-login');
+    const signupForm = document.getElementById('form-signup');
+    document.getElementById('banner').classList.add('hidden');
+
+    if(which === 'login'){
+      loginTab.classList.add('tab-active'); loginTab.classList.remove('tab-inactive');
+      signupTab.classList.add('tab-inactive'); signupTab.classList.remove('tab-active');
+      loginForm.classList.remove('hidden');
+      signupForm.classList.add('hidden');
+    } else {
+      signupTab.classList.add('tab-active'); signupTab.classList.remove('tab-inactive');
+      loginTab.classList.add('tab-inactive'); loginTab.classList.remove('tab-active');
+      signupForm.classList.remove('hidden');
+      loginForm.classList.add('hidden');
+    }
+  }
+
+  function togglePw(id, btn){
+    const el = document.getElementById(id);
+    if(el.type === 'password'){
+      el.type = 'text';
+      btn.textContent = 'Hide';
+    } else {
+      el.type = 'password';
+      btn.textContent = 'Show';
+    }
+  }
+
+  function handleLogin(e){
+    e.preventDefault();
+    const email = document.getElementById('login-email').value.trim().toLowerCase();
+    const password = document.getElementById('login-password').value;
+
+    const user = db.users.find(u => u.email.toLowerCase() === email);
+    if(!user){
+      showBanner("We couldn't find an account with that email.", 'error');
+      return false;
+    }
+    if(user.password !== password){
+      showBanner("That password doesn't match. Try again.", 'error');
+      return false;
+    }
+    db.currentUser = user;
+    showBanner(`Welcome back, ${user.name.split(' ')[0]}. You're signed in.`, 'success');
+    return false;
+  }
+
+  function handleSignup(e){
+    e.preventDefault();
+    const name = document.getElementById('signup-name').value.trim();
+    const email = document.getElementById('signup-email').value.trim().toLowerCase();
+    const password = document.getElementById('signup-password').value;
+
+    if(db.users.some(u => u.email.toLowerCase() === email)){
+      showBanner("An account with that email already exists.", 'error');
+      return false;
+    }
+    db.users.push({ name, email, password });
+    db.currentUser = db.users[db.users.length - 1];
+    showBanner(`Account created. Welcome, ${name.split(' ')[0]}.`, 'success');
+    switchTab('login');
+    document.getElementById('login-email').value = email;
+    return false;
+  }
+</script>
+
+</body>
+</html>

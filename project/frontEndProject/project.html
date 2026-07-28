@@ -1,147 +1,444 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Laundry Booking App</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../laundry.css">
+  
+
+  <title>Laundry Booking App</title>
 </head>
+
 <body class="bg-gray-100">
 
   <!-- Navbar -->
-<nav class="bg-blue-700 text-white shadow-lg sticky top-0 z-50">
+  <nav class="sticky top-0 z-50 bg-white shadow-lg">
     <div class="max-w-7xl mx-auto px-6">
-        <div class="flex justify-between items-center h-16">
+      <div class="flex items-center justify-between h-20">
 
-            <div class="text-2xl font-bold">
-                🧺 LaundryPro
-            </div>
+        <!-- Logo -->
+        <div class="flex items-center gap-3">
+          <img src="../asserts/logo2.jpg" alt="Logo" class="w-14 h-14 rounded-full">
+          <h1 class="text-2xl font-bold text-blue-600">
+            Laundry<span class="text-yellow-500">Pro</span>
+          </h1>
+        </div>
 
-            <ul class="hidden md:flex space-x-8 font-medium">
-                <li><a href="#" class="hover:text-yellow-300">Home</a></li>
-                <li><a href="#services" class="hover:text-yellow-300">Services</a></li>
-                <li><a href="#shops" class="hover:text-yellow-300">Nearby Shops</a></li>
-                <li><a href="#booking" class="hover:text-yellow-300">Book Now</a></li>
-                <li><a href="#contact" class="hover:text-yellow-300">Contact</a></li>
-            </ul>
+        
+        <div class="hidden md:flex items-center space-x-8 font-semibold">
 
-            <button class="bg-yellow-400 text-black px-4 py-2 rounded hover:bg-yellow-300">
-                Login
-            </button>
+          <a href="#home" class="text-gray-700 hover:text-blue-600 transition duration-300">
+            Home
+          </a>
+
+          <a href="about.html" class="text-gray-700 hover:text-blue-600 transition duration-300">
+            About Us
+          </a>
+
+          <a href="service.html" class="text-gray-700 hover:text-blue-600 transition duration-300">
+            Services
+          </a>
+
+          <a href="price.html" class="text-gray-700 hover:text-blue-600 transition duration-300">
+            Price List
+          </a>
+
+          <a href="contrat.html" class="text-gray-700 hover:text-blue-600 transition duration-300">
+            Contact
+          </a>
+
+          
+ <a
+  href="login.html"
+  
+  class="bg-yellow-400 hover:bg-yellow-500 text-black px-6 py-2 rounded-full font-bold">
+  Login
+        </a>
+
+<p id="message" class="mt-4 text-green-600 font-semibold"></p>
 
         </div>
+
+      </div>
     </div>
-</nav>
-<section class="bg-gradient-to-r from-blue-700 to-cyan-500 text-white py-20">
+  </nav>
+ <div class="relative w-full max-w-7xl mx-auto mt-8 overflow-hidden rounded-xl shadow-xl">
 
-<div class="text-center">
+    <!-- Slides -->
+    <div id="slider" class="flex transition-transform duration-700 ease-in-out">
 
-<h1 class="text-5xl font-bold mb-5">
-Doorstep Laundry Service
-</h1>
+      <!-- Slide 1 -->
+      <div class="min-w-full relative">
+        <img src="../asserts/banner4.jpg" class="w-full h-[500px] object-cover" alt="Banner 1">
+        <div class="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-white">
+          <h1 class="text-5xl font-bold">Premium Dry Cleaning</h1>
+          <p class="mt-4 text-xl">Professional garment care with eco-friendly cleaning.</p>
+          <a href="book.html"
+  
+  class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">
+  Book Now
+        </a>
+        </div>
+      </div>
 
-<p class="text-xl">
-Book Washing, Ironing & Dry Cleaning in Minutes
-</p>
+      <!-- Slide 2 -->
+      <div class="min-w-full relative">
+        <img src="../asserts/banner6.jpg" class="w-full h-[500px] object-cover" alt="Banner 2">
+        <div class="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-white">
+          <h1 class="text-5xl font-bold">Free Pickup & Delivery</h1>
+          <p class="mt-4 text-xl">We collect, clean, and deliver at your doorstep.</p>
+          <a href="price.html" class="mt-6 px-6 py-3 bg-green-600 rounded-lg hover:bg-green-700">
+            Price list
+          </a>
+        </div>
+      </div>
 
-<button class="bg-yellow-400 text-black px-8 py-3 mt-8 rounded-lg">
-Book Now
+      <!-- Slide 3 -->
+      <div class="min-w-full relative">
+        <img src="../asserts/home.jpg" class="w-full h-[500px] object-cover" alt="Banner 3">
+        <div class="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-white">
+          <h1 class="text-5xl font-bold">Wash • Dry • Fold</h1>
+          <p class="mt-4 text-xl">Fast, affordable, and reliable laundry service.</p>
+          <button class="mt-6 px-6 py-3 bg-red-600 rounded-lg hover:bg-red-700">
+            Explore Services
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Previous -->
+    <button
+      onclick="prevSlide()"
+      class="absolute top-1/2 left-4 -translate-y-1/2 bg-white/70 hover:bg-white rounded-full w-12 h-12 text-2xl font-bold">
+      ❮
+    </button>
+
+    <!-- Next -->
+    <button
+      onclick="nextSlide()"
+      class="absolute top-1/2 right-4 -translate-y-1/2 bg-white/70 hover:bg-white rounded-full w-12 h-12 text-2xl font-bold">
+      ❯
+    </button>
+
+    <!-- Dots -->
+    <div class="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-3">
+      <button onclick="goSlide(0)" class="dot w-3 h-3 rounded-full bg-white"></button>
+      <button onclick="goSlide(1)" class="dot w-3 h-3 rounded-full bg-gray-400"></button>
+      <button onclick="goSlide(2)" class="dot w-3 h-3 rounded-full bg-gray-400"></button>
+    </div>
+
+  </div>
+</div>
+  <!-- Hero Section -->
+<section class="bg-blue-50 m-0"  id="home">
+  <div class="max-w-7xl mx-auto px-6 py-20">
+
+    <div class="grid md:grid-cols-2 items-center gap-12">
+
+      <!-- Left Content -->
+      <div>
+        <h1 class="text-5xl font-bold text-gray-800 leading-tight">
+          Professional Laundry
+          <span class="text-blue-600">Service</span>
+          <br>
+          At Your Doorstep
+        </h1>
+
+        <p class="mt-6 text-lg text-gray-600 leading-8">
+          Save your time with our fast, reliable, and affordable laundry
+          services. We provide washing, dry cleaning, ironing, and doorstep
+          pickup & delivery with guaranteed quality.
+        </p>
+
+        <div class="mt-8 flex gap-4">
+          <button
+  onclick="bookService()"
+  class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">
+  Book Now
 </button>
+
+<div
+  id="loginModal"
+  class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
+
+  <div class="bg-white p-8 rounded-lg w-96">
+
+    <h2 class="text-2xl font-bold mb-5">
+      Login
+    </h2>
+
+    <input
+      type="text"
+      id="username"
+      placeholder="Enter Name"
+      class="w-full border p-2 rounded mb-4">
+
+    <input
+      type="password"
+      id="password"
+      placeholder="Password"
+      class="w-full border p-2 rounded mb-4">
+
+    <button
+      onclick="submitLogin()"
+      class="w-full bg-blue-600 text-white py-2 rounded">
+      Login
+    </button>
+
+  </div>
+
+</div>
+<div
+  id="bookingModal"
+  class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
+
+  <div class="bg-white p-8 rounded-lg w-[450px]">
+
+    <h2 class="text-2xl font-bold mb-5">
+      Book Laundry
+    </h2>
+
+    <input
+      id="customer"
+      type="text"
+      placeholder="Customer Name"
+      class="w-full border p-2 rounded mb-3">
+
+    <input
+      id="phone"
+      type="number"
+      placeholder="Phone Number"
+      class="w-full border p-2 rounded mb-3">
+
+    <select
+      id="service"
+      class="w-full border p-2 rounded mb-3">
+
+      <option>Dry Cleaning</option>
+      <option>Wash & Fold</option>
+      <option>Ironing</option>
+
+    </select>
+
+    <input
+      id="quantity"
+      type="number"
+      placeholder="Quantity (Kg)"
+      class="w-full border p-2 rounded mb-3">
+
+    <button
+      onclick="confirmBooking()"
+      class="w-full bg-blue-600 text-white py-2 rounded">
+      Confirm Booking
+    </button>
+
+  </div>
 
 </div>
 
+          <a  href="price.html" class="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-600 hover:text-white transition">
+            View Pricing
+          </a>
+        </div>
+
+        <!-- Statistics -->
+        <div class="mt-10 flex gap-10">
+          <div>
+            <h2 class="text-3xl font-bold text-blue-600">5000+</h2>
+            <p class="text-gray-600">Happy Customers</p>
+          </div>
+
+          <div>
+            <h2 class="text-3xl font-bold text-blue-600">24 Hours</h2>
+            <p class="text-gray-600">Fast Delivery</p>
+          </div>
+
+          <div>
+            <h2 class="text-3xl font-bold text-blue-600">100%</h2>
+            <p class="text-gray-600">Quality Service</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Image -->
+      <div>
+        <img
+          src="../asserts/home4.jpg"
+          alt="Laundry Service"
+          class="rounded-2xl shadow-xl w-full"
+        >
+      </div>
+
+    </div>
+
+  </div>
 </section>
-<section id="services" class="py-16 bg-white">
+<section class="max-w-7xl mx-auto px-8 py-16">
+  <div class="flex flex-col md:flex-row items-center gap-12">
 
-<h2 class="text-4xl font-bold text-center mb-10">
-Our Services
-</h2>
+    <!-- Left Side Image -->
+    <div class="md:w-1/2">
+      <img
+        src="../asserts/home1.jpg"
+        alt="Laundry Service"
+        class="w-full rounded-2xl shadow-lg "
+      />
+    </div>
 
-<div class="grid md:grid-cols-4 gap-6 px-10">
+    <!-- Right Side Content -->
+    <div class="md:w-1/2">
+      <h1 class="text-5xl font-bold text-gray-800 leading-tight">
+        Professional Laundry <br />
+        & Dry Cleaning Services
+      </h1>
 
-<div class="bg-blue-100 p-6 rounded-xl text-center">
-🧺
-<h3 class="text-xl font-bold mt-3">Washing</h3>
-</div>
+      <p class="mt-6 text-gray-600 text-lg leading-8">
+        We make laundry effortless with fast pickup, expert cleaning,
+        careful ironing, and on-time doorstep delivery. Your clothes are
+        handled with premium care to keep them fresh, soft, and spotless.
+      </p>
 
-<div class="bg-green-100 p-6 rounded-xl text-center">
-👔
-<h3 class="text-xl font-bold mt-3">Ironing</h3>
-</div>
+      <!-- Features -->
+      <div class="mt-8 space-y-3">
+        <div class="flex items-center gap-3">
+          <span class="text-green-500 text-xl">✔</span>
+          <p>Free Pickup & Doorstep Delivery</p>
+        </div>
 
-<div class="bg-yellow-100 p-6 rounded-xl text-center">
-✨
-<h3 class="text-xl font-bold mt-3">Dry Cleaning</h3>
-</div>
+        <div class="flex items-center gap-3">
+          <span class="text-green-500 text-xl">✔</span>
+          <p>Same Day Laundry Service</p>
+        </div>
 
-<div class="bg-pink-100 p-6 rounded-xl text-center">
-🚚
-<h3 class="text-xl font-bold mt-3">Pickup & Delivery</h3>
-</div>
+        <div class="flex items-center gap-3">
+          <span class="text-green-500 text-xl">✔</span>
+          <p>Affordable & Transparent Pricing</p>
+        </div>
 
-</div>
+        <div class="flex items-center gap-3">
+          <span class="text-green-500 text-xl">✔</span>
+          <p>Eco-Friendly Cleaning Process</p>
+        </div>
+      </div>
 
+      <!-- Buttons -->
+      <div class="mt-8 flex gap-4">
+       
+
+        <button class="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-600 hover:text-white transition">
+          Learn More
+        </button>
+      </div>
+    </div>
+
+  </div>
 </section>
-<div class="my-8 px-10">
+<!-- Footer -->
+<footer class="bg-gray-900 text-gray-300 pt-12 pb-6">
+    <div class="max-w-7xl mx-auto px-6">
 
-<input
-type="text"
-placeholder="Search Laundry Shop..."
-class="w-full p-3 border rounded-lg shadow"
-/>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
 
-<div class="bg-white p-5 rounded-xl shadow">
+            <!-- Company -->
+            <div>
+                <h2 class="text-3xl font-bold text-yellow-400 mb-4">
+                    LaundryPro
+                </h2>
 
-<h2 class="text-2xl font-bold">
-Quick Wash
-</h2>
+                <p class="text-gray-400 leading-7">
+                    We provide premium dry cleaning and laundry services with
+                    free pickup & delivery. Your clothes are cleaned with
+                    eco-friendly products and handled with utmost care.
+                </p>
 
-<p>⭐ 4.8</p>
+                
+            </div>
 
-<p>📍 1 km Away</p>
+            <!-- Quick Links -->
+            <div>
+                <h3 class="text-xl font-semibold text-white mb-5">
+                    Quick Links
+                </h3>
 
-<p>🕒 Open : 8AM - 9PM</p>
+                <ul class="space-y-3">
+                    <li><a href="project.html" class="hover:text-yellow-400 duration-300">Home</a></li>
+                    <li><a href="about.html" class="hover:text-yellow-400 duration-300">About Us</a></li>
+                    <li><a href="service.html" class="hover:text-yellow-400 duration-300">Services</a></li>
+                    <li><a href="price.html" class="hover:text-yellow-400 duration-300">Pricing</a></li>
+                    <li><a href="contrat.html" class="hover:text-yellow-400 duration-300">Contact</a></li>
+                </ul>
+            </div>
 
-<p class="text-green-600">
-Starting ₹99
-</p>
+            <!-- Our Services -->
+            <div>
+                <h3 class="text-xl font-semibold text-white mb-5">
+                    Our Services
+                </h3>
 
-<button class="bg-blue-600 text-white px-4 py-2 rounded mt-3">
-Select
-</button>
+                <ul class="space-y-3">
+                    <li>✔ Dry Cleaning</li>
+                    <li>✔ Steam Ironing</li>
+                    <li>✔ Wash & Fold</li>
+                    <li>✔ Curtain Cleaning</li>
+                    <li>✔ Blanket Cleaning</li>
+                    <li>✔ Shoe Cleaning</li>
+                </ul>
+            </div>
 
-</div>
-<input type="date">
+            <!-- Contact -->
+            <div>
+                <h3 class="text-xl font-semibold text-white mb-5">
+                    Contact Us
+                </h3>
 
-<input type="time">
+                <div class="space-y-4">
 
-<input type="number" placeholder="Number of Clothes">
+                    <p>
+                        📍 123 Main Road,<br>
+                        Chennai - 600001
+                    </p>
 
-<select>
+                    <p>
+                        📞 +91 98765 43210
+                    </p>
 
-<option>Cash</option>
+                    <p>
+                        ✉ info@laundrypro.com
+                    </p>
 
-<option>UPI</option>
+                    <p>
+                        🕒 Mon - Sun <br>
+                        8:00 AM - 9:00 PM
+                    </p>
 
-<option>Card</option>
+                </div>
+            </div>
 
-</select>
-<div class="bg-white p-6 rounded shadow mt-8">
+        </div>
 
-<h2 class="text-2xl font-bold">
-Track Order
-</h2>
 
-<input
-placeholder="Enter Order ID"
-class="border p-2 rounded w-full my-3">
+        <!-- Bottom Footer -->
+        <div class="border-t border-gray-700 mt-10 pt-6 text-center">
 
-<button class="bg-green-600 text-white px-4 py-2 rounded">
-Track
-</button>
+            <p class="text-gray-400">
+                © 2026 <span class="text-yellow-400 font-semibold">LaundryPro</span>.
+                All Rights Reserved.
+            </p>
 
-</div>
+            <p class="mt-2 text-sm text-gray-500">
+                Designed with ❤️ for Premium Dry Cleaning Services
+            </p>
 
-</div>
+        </div>
 
+    </div>
+</footer>
+
+  <script src="../laundry.js"></script>
 </body>
 </html>
